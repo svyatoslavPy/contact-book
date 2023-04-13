@@ -1,15 +1,18 @@
 import './App.css'
 
-import { AddRecordForm } from './components/AddRecordForm'
 import { PhoneBookRecords } from './components/PhoneBookRecords'
+import { Login } from './components/Login'
+import { ProviderLogin } from './provider/prodiverForLogin'
+import { DataStoreProvider } from './provider/providerDataStore'
 
 function App() {
 	return (
-		<div className='App'>
-			Demo
-			<AddRecordForm />
-			<PhoneBookRecords />
-		</div>
+		<DataStoreProvider>
+			<ProviderLogin>
+				<PhoneBookRecords />
+				<Login></Login>
+			</ProviderLogin>
+		</DataStoreProvider>
 	)
 }
 

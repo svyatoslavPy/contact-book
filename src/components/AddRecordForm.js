@@ -2,7 +2,7 @@ import { useAddRecords } from '../hooks/useAddRecords'
 
 
 export const AddRecordForm = () => {
-	const { addRecord, data, loading, error } = useAddRecords()
+	const { addRecord  } = useAddRecords()
 
 	const addRecordHandler = () => {
 		addRecord({
@@ -13,8 +13,9 @@ export const AddRecordForm = () => {
 	}
 
 	return (
-		<>
-			<button onClick={addRecordHandler}>Add record</button>
-		</>
+		<div className='btns-add'>
+			<p>Demo</p>
+			<button className='btns-add__item' onClick={addRecordHandler}>Add record</button>
+		</div>
 	)
 }

@@ -4,7 +4,7 @@ import { useEditRecords } from '../hooks/useEditRecords'
 import { PhoneCard } from './PhoneCard'
 
 export const Record = props => {
-	const { delRecord, data, loading, error } = useDeleteRecords()
+	const { delRecord  } = useDeleteRecords()
 	const [change, setChange] = useState(true)
 	const [value, setValue] = useState('')
 	const { editRecord } = useEditRecords()
@@ -33,7 +33,7 @@ export const Record = props => {
 	}
 
 	return (
-		<>
+		<div className='record-items'>
 			{change ? (
 				<PhoneCard
 					change={change}
@@ -51,6 +51,6 @@ export const Record = props => {
 					{change ? 'Edit' : 'Save'}
 				</button>
 			</div>
-		</>
+		</div>
 	)
 }

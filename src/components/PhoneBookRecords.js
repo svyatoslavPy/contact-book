@@ -1,5 +1,7 @@
 import { useFetchRecords } from '../hooks/useFetchRecords'
 import { RecordList } from './RecordList'
+import { AddRecordForm } from './AddRecordForm'
+import { LoginOut } from './Logout'
 
 export const PhoneBookRecords = () => {
 	const { data, loading, error } = useFetchRecords()
@@ -8,7 +10,13 @@ export const PhoneBookRecords = () => {
 		return <h1 style={{ color: 'red' }}>We have a problem</h1>
 	}
 
-	// console.log(data)
-
-	return <>{loading ? <p>loading...</p> : <RecordList recordList={data} />}</>
+	return (
+		<div className='phone-wrapper'>
+			<div className='phone'>
+				<AddRecordForm />
+				<>{loading ? <p>loading...</p> : <RecordList recordList={data} />}</>
+			</div>
+				{!loading && <LoginOut />}
+		</div>
+	)
 }

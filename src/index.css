@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(242, 242, 242);
 }
 
 code {
@@ -23,4 +24,68 @@ code {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.btns-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  /* margin: 10px 0px 0px 0px; */
+}
+
+.btns-add__item {
+  width: 100px;
+  height: 20px;
+}
+
+.phone-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 40px 0px 0px 0px;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 325px;
+  /* min-height: 500px; */
+  height: 30%;
+  padding-bottom: 10px;
+  background: white;
+  border-radius: 20px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+}
+
+.record-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: rgb(241, 241, 241); */
+  margin: 0px 0px 10px 0px;
+  padding: 8px;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.record-items:hover {
+  transition: 0.1s;
+  cursor: pointer;
+  background: rgb(241, 241, 241);
+}
+
+.btn-logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 20px;
+  margin: 20px 0px 0px 0px;
 }
