@@ -6,6 +6,7 @@ export const useDeleteRecords = () => {
 	const [loading, setLoading] = useState(false)
 	// const [error, setError] = useState(undefined)
   const { fetchData } = useFetchRecords()
+	
 	const delRecord = id => {
 		setLoading(true)
 		axios.delete(`records/${id}`).then(resp => {

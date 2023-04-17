@@ -16,7 +16,7 @@ export const PhoneBookRecords = () => {
 				<AddRecordForm />
 				<>{loading ? <p>loading...</p> : <RecordList recordList={data} />}</>
 			</div>
-				{!loading && <LoginOut />}
+			{!loading && <LoginOut />}
 		</div>
 	)
 }
